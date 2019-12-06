@@ -22,6 +22,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1TyXKZwhVNGkwAilVHE80UES6w1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -78,11 +79,23 @@
       <workItem from="1574433249094" duration="8294000" />
       <workItem from="1574472637950" duration="5926000" />
       <workItem from="1574489713537" duration="5527000" />
+      <workItem from="1574509223760" duration="610000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

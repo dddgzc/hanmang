@@ -71,6 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -88,9 +89,36 @@ DATABASES = {
         'NAME': 'db_hanmang',
         'USER':'root',
         'PASSWORD':'18996122619',
-        'HOST':'148.70.169.113'
+        'HOST':'148.70.169.113',
+        'OPTIONS':{'charset':'utf8mb4'},
     }
 }
+
+## 配置redis
+# CACHES = {
+#     'default':{
+#         "BACKEND":"django_redis.cache.RedisCache",
+#         "LOCATION":"redis://148.70.169.113/1",
+#         "OPTIONS":{
+#             'CLIENT_CLASS':'django_redis.client.DefaultClient',
+#         }
+#     }
+# }
+# 配置外部可访问
+ALLOWED_HOSTS = [
+    '0.0.0.0',
+    '192.168.8.114',
+    '192.168.80.128',
+    '192.168.80.55',
+    '192.168.43.114',
+    '192.168.0.7'
+]
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+APPEND_SLASH=False
+
 # LifeJoke 的小程序APPID和APPKEY
 # appid
 APP_ID = 'wxc332005ea9cde05b'

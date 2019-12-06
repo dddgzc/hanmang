@@ -30,7 +30,7 @@ class CourseComments(BaseModel):
 class UserFavorite(BaseModel):
     user = models.ForeignKey(UserProfile,on_delete=models.CASCADE,verbose_name="用户")
     fav_id = models.IntegerField(verbose_name="数据id")
-    fav_type =  models.IntegerField(choices=((1,"课程"),(2,"课程机构"),(3,"讲师")),default=1,verbose_name=u"收藏类型")
+    fav_type = models.IntegerField(choices=((1,"课程"),(2,"课程机构"),(3,"讲师")),default=1,verbose_name=u"收藏类型")
 
     class Meta:
         verbose_name = "用户收藏"
@@ -52,3 +52,14 @@ class UserCourse(BaseModel):
     class Meta:
         verbose_name = "用户课程"
         verbose_name_plural = verbose_name
+
+
+# 用户订单表
+class UserOrder(BaseModel):
+    user = models.ForeignKey(UserProfile,on_delete=models.CASCADE,verbose_name="用户")
+    course = models.ForeignKey(Course,on_delete=models.CASCADE,verbose_name="课程")
+    order_sn = models.CharField(max_length=500,null=False,verbose_name="订单编号")
+    pay_price = models.DecimalField(max_digits=9,null=False,decimal_places=3,verbose_name="支付金额")
+    pay_time = models.DateTimeField(null=False,verbose_name="支付时间")
+    created_time = models.DateTimeField(null=False,verbose_name="订单创建时间")
+    order_desc = models.CharField(null=False,max_length=300,verbose_name="订单描述")

@@ -13,17 +13,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
-from apps.users.views import LoginView,UserInfoView
-
+from django.views.static import serve
+from .settings import MEDIA_ROOT
 import xadmin
 
 urlpatterns = [
-    #path('admin/', admin.site.urls),
     path('xadmin/',xadmin.site.urls),
-    url(r'login/', LoginView.as_view()),
-    url(r'userinfo/',UserInfoView.as_view()),
+    path('user/',include('apps.users.urls')),
+    path('organizations/',include('apps.organizations.urls')),
+    path('course/',include('apps.courses.urls')),
+    path('operations/',include('apps.operations.urls')),
     url(r'^ueditor/',include('DjangoUeditor.urls')),
+    ##配置文件上传之后的访问路径
+    url(r'^media/(?P<path>.*)$', serve, {"document_root":MEDIA_ROOT}),
 ]

@@ -20,8 +20,9 @@ class UserProfile(AbstractUser):
     gender = models.CharField(verbose_name='性别',choices=GENDER_CHOICES,max_length=6)
     address = models.CharField(max_length=100,verbose_name='地址',default="")
     mobile = models.CharField(max_length=11,verbose_name="手机号码")
-    image = models.ImageField(verbose_name="用户头像",upload_to="head_image/%Y/%m",default="head_image/default.jpg")
+    image = models.CharField(verbose_name="用户头像",max_length=600)
     openid = models.CharField(max_length=64,db_index=True,verbose_name='openid',default=None)
+    salt = models.CharField(max_length=32,null = False,default="",verbose_name="盐")
 
     class Meta:
         verbose_name = "用户信息"
@@ -32,3 +33,4 @@ class UserProfile(AbstractUser):
             return self.nick_name
         else:
             return self.username
+

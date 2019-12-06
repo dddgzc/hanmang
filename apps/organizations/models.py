@@ -5,7 +5,6 @@ from apps.users.models import BaseModel
 class City(BaseModel):
     name = models.CharField(max_length=20,verbose_name=u"城市")
     desc = models.CharField(max_length=200,verbose_name=u"描述")
-
     def __str__(self):
         return self.name
 
@@ -27,6 +26,9 @@ class CourseOrg(BaseModel):
     course_nums = models.IntegerField(default=0,verbose_name="课程数")
     city = models.ForeignKey(City,on_delete=models.CASCADE,verbose_name=u"所在城市")
 
+    def __str__(self):
+        return self.name
+
     class Meta:
         verbose_name = "课程机构"
         verbose_name_plural = verbose_name
@@ -42,6 +44,9 @@ class Teacher(BaseModel):
     fav_nums = models.IntegerField(default=0,verbose_name="收藏数")
     age = models.IntegerField(default=18,verbose_name="年龄")
     image = models.ImageField(upload_to="teacher/%Y/%m",verbose_name="头像",max_length=100)
+
+    def __str__(self):
+        return self.name
 
     class Meta:
         verbose_name = "教师"

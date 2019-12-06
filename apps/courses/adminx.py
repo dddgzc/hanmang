@@ -1,6 +1,6 @@
 import xadmin
 
-from apps.courses.models import Course,Lesson,Video,CourseResource
+from apps.courses.models import Course,Lesson,Video,CourseResource,CourseType
 
 
 class GlobalSettings(object):
@@ -13,12 +13,16 @@ class BaseSettings(object):
     enable_themes = True
     use_bootswatch = True
 
+class CourseTypeAdmin(object):
+    list_display = ['type','desc']
+    list_editable = ['type','desc']
 
 class CourseAdmin(object):
     list_display = ['name', 'desc', 'detail', 'degree', 'learn_times', 'students']
     search_fields = ['name', 'desc', 'detail', 'degree', 'students']
     list_filter = ['name', 'teacher__name', 'desc', 'detail', 'degree', 'learn_times', 'students']
     list_editable = ["degree", "desc"]
+    style_fields = {'detail':'ueditor'}
 
 
 class LessonAdmin(object):
@@ -43,6 +47,7 @@ xadmin.site.register(Lesson, LessonAdmin)
 xadmin.site.register(Video, VideoAdmin)
 xadmin.site.register(CourseResource, CourseResourceAdmin)
 xadmin.site.register(Course, CourseAdmin)
+xadmin.site.register(CourseType,CourseTypeAdmin)
 #xadmin 配置
 xadmin.site.register(xadmin.views.CommAdminView,GlobalSettings)
 xadmin.site.register(xadmin.views.BaseAdminView,BaseSettings)
