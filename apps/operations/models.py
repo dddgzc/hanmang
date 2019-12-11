@@ -63,3 +63,20 @@ class UserOrder(BaseModel):
     pay_time = models.DateTimeField(null=False,verbose_name="支付时间")
     created_time = models.DateTimeField(null=False,verbose_name="订单创建时间")
     order_desc = models.CharField(null=False,max_length=300,verbose_name="订单描述")
+    order_Opinion = models.CharField(null=False,max_length=800,verbose_name="订单评价")
+    is_Opinion = models.BooleanField(default=False,verbose_name="是否评价")
+    is_Pay = models.BooleanField(default=False,verbose_name="是否支付")
+
+    class Meta:
+        verbose_name = "用户订单"
+        verbose_name_plural = verbose_name
+
+
+# 用户意见
+class UserOpinion(BaseModel):
+    user = models.ForeignKey(UserProfile,on_delete=models.CASCADE,verbose_name="用户")
+    opinion = models.CharField(max_length=700,verbose_name="用户反馈")
+
+    class Meta:
+        verbose_name = "用户意见"
+        verbose_name_plural = verbose_name

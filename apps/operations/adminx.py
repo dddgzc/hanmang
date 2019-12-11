@@ -1,6 +1,6 @@
 import xadmin
 
-from apps.operations.models import UserAsk,CourseComments,UserFavorite,UserMessage,UserCourse
+from apps.operations.models import UserAsk,CourseComments,UserFavorite,UserMessage,UserCourse,UserOpinion,UserOrder
 
 
 class UserAskAdmin(object):
@@ -38,9 +38,20 @@ class UserFavoriteAdmin(object):
     search_fields = ['user', 'fav_id', 'fav_type']
     list_filter = ['user', 'fav_id', 'fav_type', 'add_time']
 
+class UserOpinionAdmin(object):
+    list_display = ['user','opinion']
+    search_fields = ['user','opinion']
+    list_filter = ['user','opinion']
+
+class UserOrderAdmin(object):
+    list_display = ['user','course','order_sn','pay_price','pay_time']
+    search_fields = ['user', 'course', 'order_sn', 'pay_price', 'pay_time']
+    list_filter = ['user', 'course', 'order_sn', 'pay_price', 'pay_time']
 
 xadmin.site.register(UserAsk, UserAskAdmin)
 xadmin.site.register(UserCourse, UserCourseAdmin)
 xadmin.site.register(UserMessage, UserMessageAdmin)
 xadmin.site.register(CourseComments, CourseCommentsAdmin)
 xadmin.site.register(UserFavorite, UserFavoriteAdmin)
+xadmin.site.register(UserOpinion,UserOpinionAdmin)
+xadmin.site.register(UserOrder,UserOrderAdmin)

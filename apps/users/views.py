@@ -89,6 +89,3 @@ def getAllCollection(request):
         resp = {'code': 200, 'msg': '操作成功', 'data': {}}
         return HttpResponse(json.dumps(resp))
 
-def test(request):
-    if request.method == 'GET':
-        return HttpResponse("test successful")

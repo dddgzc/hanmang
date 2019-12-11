@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http.response import HttpResponse
 from apps.courses.models import Course
 from apps.users.models import UserProfile
-from apps.operations.models import UserFavorite
+from apps.operations.models import UserFavorite,UserOpinion,UserOrder
 from django.views.decorators.csrf import csrf_exempt
 from django.core import serializers
 
@@ -61,15 +61,23 @@ def addFav(request):
         resp = {'code': 200, 'msg': '操作成功', 'data': {}}
         return HttpResponse(json.dumps(resp))
 
-@csrf_exempt
-def getCollection(request):
-    ## 获取未评价
-    pass
-
+# 待测试
+## 获取所有订单
 @csrf_exempt
 def getOrder(request):
-    ## 获取所有订单
-    pass
+    resp = {'code': 200, 'msg': '操作成功', 'data': {}}
+    if request.method == "POST":
+        openid = request.POST.get("token").split("#")[0]
+        user = UserProfile.objects.filter(openid = openid)[0]
+        userOrders = UserOrder.objects.filter(user=user)
+        serializers.serialize("json",userOrders)
+        resp['data'] = userOrders
+        return HttpResponse(json.dumps(resp))
+    else:
+        resp['code'] = 500
+        resp['msg'] = "操作失败"
+        return HttpResponse(json.dumps(resp))
+
 
 # 判断列表课程是否已经收藏
 @csrf_exempt
@@ -100,6 +108,7 @@ def isFav(request):
             }
             return HttpResponse(json.dumps(resp))
 
+
 # 获取所有当前用户的收藏
 @csrf_exempt
 def getFav(request):
@@ -122,33 +131,59 @@ def getFav(request):
         resp = {'code': 200, 'msg': '操作成功', 'data': {}}
         return HttpResponse(json.dumps(resp))
 
-## 获取收藏数量
-@csrf_exempt
-def getFavNum(request):
-    ## 获取用户的openid
-    resp = {'code': 200, 'msg': '操作成功', 'data': {}}
-    if request.method == "GET":
-        ## 获取用户的openid
-        pass
-    else:
-        pass
 
-## 获取订单数量
+## 用户订单评价
 @csrf_exempt
-def getOrderNum(request):
-    resp = {'code': 200, 'msg': '操作成功', 'data': {}}
-    if request.method == "GET":
-        ## 获取用户的openid
-        pass
-    else:
-        pass
+def setCollection(request):
+    pass
 
-##获取所有待评价数量
+
+## 支付操作
 @csrf_exempt
-def getEvaluateNum(request):
+def userPay(request):
+    pass
+
+
+## 用户意见
+@csrf_exempt
+def setOpinion(request):
+    resp = {'code': 200, 'msg': '操作成功', 'data': {}}
+    if request.method == "POST":
+
+        openid = request.POST.get("token").split("#")[1] # 获取token 解析出openid
+        content = request.POST.get("content")
+
+        user = UserProfile.objects.filter(openid = openid)[0]
+        opinion = UserOpinion(user=user,opinion=content).save()
+
+        ## 操作成功
+        return HttpResponse(json.dumps(resp))
+    else:
+        resp = {'code': 500, 'msg': '操作失败', 'data': {}}
+        return HttpResponse(json.dumps(resp))
+
+
+## 获取用户页面数量
+# 待测试
+## 获取待评价的课程数量
+@csrf_exempt
+def getNum(request):
     resp = {'code': 200, 'msg': '操作成功', 'data': {}}
     if request.method == "GET":
-        ## 获取用户的openid
-        pass
+        openid = request.GET.get("token").split("#")[1]
+        user = UserProfile.objects.filter(openid = openid)[0]
+
+        noEvaluate = UserOrder.objects.filter(user=user).filter(is_Opinion = False).count() ## 未评价订单数量
+        favNum = UserFavorite.objects.filter(user=user).count() ## 收藏数量
+        orderNum = UserOrder.objects.all().count() #所有订单数量
+
+        resp['data'] = {
+            'noEvaluate': noEvaluate,
+            'favNum':favNum,
+            'orderNum':orderNum,
+        }
+        return HttpResponse(json.dumps(resp))
     else:
-        pass
+        resp['code'] = 500;
+        resp['msg'] = '操作失败'
+        return HttpResponse(json.dumps(resp))

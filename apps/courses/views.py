@@ -35,7 +35,7 @@ def courseList(request):
 @csrf_exempt
 def getCourseType(request):
     if request.method == "GET":
-        resp = {'code': -1, 'msg': '请求失败', 'data': {}}
+        resp = {'code': -1, 'msg': '请求成功', 'data': {}}
         courseType = CourseType.objects.all()
         courseType = serializers.serialize("json",courseType)
         courseType = json.loads(courseType)
