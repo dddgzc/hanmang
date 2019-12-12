@@ -7,6 +7,12 @@ from apps.operations.models import UserFavorite,UserOpinion,UserOrder
 from django.views.decorators.csrf import csrf_exempt
 from django.core import serializers
 
+from utils.Code import deCryption
+from utils.WeChatPay import get_bodyData,get_paysign,xml_to_dict
+from hanmang.settings import order_url
+import requests
+import time
+
 import json
 
 # Create your views here.
@@ -20,14 +26,14 @@ def addFav(request):
         token = request.GET.get('token')  # 用户token
         key = request.GET.get("key")  # 课程id
         isCollection = request.GET.get("isCollection")  # 是否已经收藏
-        open_id = token.split('#')[1]  # 获取用户的openid 后期修改为高级的加密方式 现在只是一个简单的字符串拼接
+        openid = deCryption(token)
         '''
             如果isCollection 是true 说明已经收藏就取消收藏
             如果isCollection 是false 说明没有收藏就收藏
         '''
         if isCollection == 'true':
             # 通过openid 查找到用户
-            user = UserProfile.objects.filter(openid=open_id).first()
+            user = UserProfile.objects.filter(openid=openid).first()
             # 通过user 查找用户的favlist
             favlist = UserFavorite.objects.filter(user_id=user.id)
             # 从收藏中删除 该课程
@@ -41,7 +47,7 @@ def addFav(request):
             return HttpResponse(json.dumps(resp))
         else:
             # 通过openid 查询user 的id
-            user = UserProfile.objects.filter(openid=open_id).first()
+            user = UserProfile.objects.filter(openid=openid).first()
             # 创建一个UserFavorite对象
             userFav = UserFavorite()
             userFav.user = user
@@ -67,7 +73,8 @@ def addFav(request):
 def getOrder(request):
     resp = {'code': 200, 'msg': '操作成功', 'data': {}}
     if request.method == "POST":
-        openid = request.POST.get("token").split("#")[0]
+        token = request.POST.get("token")
+        openid = deCryption(token)
         user = UserProfile.objects.filter(openid = openid)[0]
         userOrders = UserOrder.objects.filter(user=user)
         serializers.serialize("json",userOrders)
@@ -86,9 +93,9 @@ def isFav(request):
         resp = {'code': 200, 'msg': '操作成功', 'data': {}}
         key = int(request.GET.get("key"))
         token = request.GET.get("token")
-        open_id = token.split('#')[1]# 获取用户的openid 后期修改为高级的加密方式 现在只是一个简单的字符串拼接
+        openid = deCryption(token)
         # 通过openid 查找到用户
-        user = UserProfile.objects.filter(openid=open_id)[0]
+        user = UserProfile.objects.filter(openid=openid)[0]
         # 查询出用户的所有收藏
         favs = UserFavorite.objects.filter(user_id= user.id)
         flag = False    ## False表示没有收藏 True表示收藏了
@@ -114,9 +121,10 @@ def isFav(request):
 def getFav(request):
     if request.method == 'GET':
         resp = {'code': 200, 'msg': '操作成功', 'data': {}}
-        open_id = request.GET.get("token").split("#")[1] # 获取token 解析出openid
+        token = request.GET.get("token") # 获取token 解析出openid
+        openid = deCryption(token)
         # 获取用户
-        user = UserProfile.objects.filter(openid=open_id)[0]
+        user = UserProfile.objects.filter(openid=openid)[0]
         # 获取用户收藏中所有收藏的课程的id
         favIdList = UserFavorite.objects.filter(user = user)
 
@@ -135,12 +143,6 @@ def getFav(request):
 ## 用户订单评价
 @csrf_exempt
 def setCollection(request):
-    pass
-
-
-## 支付操作
-@csrf_exempt
-def userPay(request):
     pass
 
 
@@ -170,7 +172,8 @@ def setOpinion(request):
 def getNum(request):
     resp = {'code': 200, 'msg': '操作成功', 'data': {}}
     if request.method == "GET":
-        openid = request.GET.get("token").split("#")[1]
+        token = request.GET.get("token")
+        openid = deCryption(token)
         user = UserProfile.objects.filter(openid = openid)[0]
 
         noEvaluate = UserOrder.objects.filter(user=user).filter(is_Opinion = False).count() ## 未评价订单数量
@@ -186,4 +189,56 @@ def getNum(request):
     else:
         resp['code'] = 500;
         resp['msg'] = '操作失败'
+        return HttpResponse(json.dumps(resp))
+
+
+
+# 统一下单支付接口
+@csrf_exempt
+def payOrder(request):
+    if request.method == 'POST':
+        # 获取价格
+        price = request.POST.get("price")
+
+        # 获取客户端ip
+        client_ip, port = request.get_host().split(":")
+
+        # 获取小程序openid
+        token = request.GET.get("token")
+        openid = deCryption(token)
+
+
+        # 请求微信的url
+        url = order_url
+
+        # 拿到封装好的xml数据
+        body_data = get_bodyData(openid, client_ip, price)
+
+        # 获取时间戳
+        timeStamp = str(int(time.time()))
+
+        # 请求微信接口下单
+        respone = requests.post(url, body_data.encode("utf-8"), headers={'Content-Type': 'application/xml'})
+
+        # 回复数据为xml,将其转为字典
+        content = xml_to_dict(respone.content)
+
+        if content["return_code"] == 'SUCCESS':
+            # 获取预支付交易会话标识
+            prepay_id = content.get("prepay_id")
+            # 获取随机字符串
+            nonceStr = content.get("nonce_str")
+
+            # 获取paySign签名，这个需要我们根据拿到的prepay_id和nonceStr进行计算签名
+            paySign = get_paysign(prepay_id, timeStamp, nonceStr)
+
+            # 封装返回给前端的数据
+            data = {"prepay_id": prepay_id, "nonceStr": nonceStr, "paySign": paySign, "timeStamp": timeStamp}
+
+            return HttpResponse(json.dumps(data))
+
+        else:
+            return HttpResponse("请求支付失败")
+    else:
+        resp = {'code':500,'msg':"请求失败"}
         return HttpResponse(json.dumps(resp))

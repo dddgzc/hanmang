@@ -126,6 +126,12 @@ APP_ID = 'wxc332005ea9cde05b'
 # appkey
 APP_KEY = '045dc84aa79dfb01a0f07d306fbd5d85'
 #jwt 配置
+
+# 寒芒的商户key 这是的要重新写
+Mch_key = '323423sfadsfasdf'
+# 微信支付访问接口
+order_url = 'https://api.mch.weixin.qq.com/pay/unifiedorder'
+
 REST_FRAMEWORK = {
 'DEFAULT_AUTHENTICATION_CLASSES':(
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',

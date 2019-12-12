@@ -24,15 +24,3 @@ def getOrganizations(request):
         resp['msg'] = 'error request use post'
         return HttpResponse(json.dumps(resp))
 
-@csrf_exempt
-def addOrganizations(self,request,*args,**kwargs):
-    ## 添加收藏
-    # 传递user 的 id 和 课程的id
-    pass
-
-@csrf_exempt
-def byCourse(self,request,*args,**kwargs):
-    ## 购买课程
-    # 传递user 的id和 课程的id
-    pass
-
