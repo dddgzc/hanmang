@@ -122,9 +122,9 @@ APPEND_SLASH=False
 
 # LifeJoke 的小程序APPID和APPKEY
 # appid
-APP_ID = 'wxc332005ea9cde05b'
+APP_ID = 'wxe6851ea0c162e8cf'
 # appkey
-APP_KEY = '045dc84aa79dfb01a0f07d306fbd5d85'
+APP_KEY = 'fd9f85627742e69506f8bc7bd07a2e6b'
 #jwt 配置
 
 # 寒芒的商户key 这是的要重新写

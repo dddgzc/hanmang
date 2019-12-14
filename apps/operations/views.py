@@ -20,7 +20,6 @@ import json
 # 当用户点击时 查看添加收藏还是删除收藏
 @csrf_exempt
 def addFav(request):
-    ## 获取所有收藏
     if request.method == "GET":
         resp = {'code': 200, 'msg': '操作成功', 'data': {}}
         token = request.GET.get('token')  # 用户token
@@ -38,7 +37,6 @@ def addFav(request):
             favlist = UserFavorite.objects.filter(user_id=user.id)
             # 从收藏中删除 该课程
             favlist.filter(fav_id=key).delete()
-
             # 返回isCollection 为false删除成功
             resp['msg'] = "操作成功"
             resp['data'] = {
@@ -53,9 +51,7 @@ def addFav(request):
             userFav.user = user
             userFav.fav_id = key
             userFav.fav_type = 1
-            # 存储对象 收藏成功
             userFav.save()
-
             # 返回isCollection为true 添加成功
             resp['msg'] = "操作成功"
             resp['data'] = {
@@ -95,7 +91,7 @@ def isFav(request):
         token = request.GET.get("token")
         openid = deCryption(token)
         # 通过openid 查找到用户
-        user = UserProfile.objects.filter(openid=openid)[0]
+        user = UserProfile.objects.filter(openid=openid)[0] # 没有收藏抛异常
         # 查询出用户的所有收藏
         favs = UserFavorite.objects.filter(user_id= user.id)
         flag = False    ## False表示没有收藏 True表示收藏了
@@ -151,8 +147,9 @@ def setCollection(request):
 def setOpinion(request):
     resp = {'code': 200, 'msg': '操作成功', 'data': {}}
     if request.method == "POST":
+        token = request.POST.get("token")
+        openid = deCryption(token)
 
-        openid = request.POST.get("token").split("#")[1] # 获取token 解析出openid
         content = request.POST.get("content")
 
         user = UserProfile.objects.filter(openid = openid)[0]

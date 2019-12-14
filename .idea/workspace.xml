@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7ddab04-c474-4ea3-8fc6-13bab2b81ee3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/courses/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/courses/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/courses/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/courses/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/operations/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/operations/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/organizations/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/organizations/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hanmang/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/hanmang/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/HBaioE26OxbLEL98e2oX0Onn8i7iYcPpJf0OSnqvyF9_8s6gYsf16a52PUxMQ3NT_20191206100010_427.mp4" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +33,7 @@
   <component name="ProjectId" id="1TyXKZwhVNGkwAilVHE80UES6w1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -93,7 +94,9 @@
       <workItem from="1575949759493" duration="1214000" />
       <workItem from="1575959330015" duration="7327000" />
       <workItem from="1576027173881" duration="39807000" />
-      <workItem from="1576131654989" duration="3178000" />
+      <workItem from="1576131654989" duration="21130000" />
+      <workItem from="1576313195362" duration="340000" />
+      <workItem from="1576313586895" duration="1681000" />
     </task>
     <task id="LOCAL-00001" summary="提交未实现支付">
       <created>1576051957729</created>
@@ -126,15 +129,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="提交未实现支付" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/apps/operations/views.py</url>
-          <line>154</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Python.DjangoServer">
         <watch expression="request._messages.request._read_started" />

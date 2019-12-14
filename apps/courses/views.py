@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http.response import HttpResponse
-from apps.courses.models import Course,CourseType
+from apps.courses.models import Course,CourseType,Lesson,Video
 from apps.organizations.models import Teacher,CourseOrg
 from apps.operations.models import CourseComments
 from django.views.decorators.csrf import csrf_exempt
@@ -50,9 +50,19 @@ def getCourseType(request):
 @csrf_exempt
 def getCourse(request):
     if request.method == "GET":
-        resp = {'code': -1, 'msg': '请求失败', 'data': {}}
+        resp = {'code': 200, 'msg': '请求成功', 'data': {}}
         key = request.GET.get("key")
         course = Course.objects.filter(id = key)
+        # 获取课程的第一章节
+        try:
+            lesson = Lesson.objects.filter(course=course[0])[0]
+            vedio = Video.objects.filter(lesson = lesson)
+            vedio = serializers.serialize("json", vedio)
+            vedio = json.loads(vedio)
+            resp['vedio'] = vedio
+        except BaseException:
+             pass
+
         if course is None:
             resp['msg'] = "课程暂未开发";
             return HttpResponse(json.dumps(resp))
@@ -63,14 +73,14 @@ def getCourse(request):
         resp['data'] = course
         return HttpResponse(json.dumps(resp))
     else:
-        resp = {'code': -1, 'msg': '请求失败', 'data': {}}
+        resp = {'code': 500, 'msg': '请求失败', 'data': {}}
         return resp
 
 ## 通过分类id获取课程
 @csrf_exempt
 def getCourseByClassic(request):
     if request.method == "GET":
-        res = {'code': -1, 'msg': '请求失败', 'data': {}}
+        res = {'code': 200, 'msg': '请求成功', 'data': {}}
         # 当前机构 id
         orgid = int(request.GET.get("orgid"))
         # 选择分类 id
@@ -88,7 +98,7 @@ def getCourseByClassic(request):
             courseList = serializers.serialize("json",courseList)
             return HttpResponse(courseList)
         else:
-        # 获取指定分类的课程
+        # 获取指定分类的课程的list
             courseClassicList = []
             for course in courseList:
                 if(course.category_id == int(classic)):
