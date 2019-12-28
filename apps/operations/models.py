@@ -27,6 +27,7 @@ class CourseComments(BaseModel):
         verbose_name = "课程评论"
         verbose_name_plural = verbose_name
 
+# 用户收藏
 class UserFavorite(BaseModel):
     user = models.ForeignKey(UserProfile,on_delete=models.CASCADE,verbose_name="用户")
     fav_id = models.IntegerField(verbose_name="数据id")
@@ -60,10 +61,10 @@ class UserOrder(BaseModel):
     course = models.ForeignKey(Course,on_delete=models.CASCADE,verbose_name="课程")
     order_sn = models.CharField(max_length=500,null=False,verbose_name="订单编号")
     pay_price = models.DecimalField(max_digits=9,null=False,decimal_places=3,verbose_name="支付金额")
-    pay_time = models.DateTimeField(null=False,verbose_name="支付时间")
+    pay_time = models.DateTimeField(null=True,verbose_name="支付时间")
     created_time = models.DateTimeField(null=False,verbose_name="订单创建时间")
     order_desc = models.CharField(null=False,max_length=300,verbose_name="订单描述")
-    order_Opinion = models.CharField(null=False,max_length=800,verbose_name="订单评价")
+    order_Opinion = models.CharField(null=True,max_length=800,verbose_name="订单评价")
     is_Opinion = models.BooleanField(default=False,verbose_name="是否评价")
     is_Pay = models.BooleanField(default=False,verbose_name="是否支付")
 

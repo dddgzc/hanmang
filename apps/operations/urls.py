@@ -7,5 +7,6 @@ urlpatterns = [
     path("isfav/",views.isFav),
     path("setopinion/",views.setOpinion),
     path("getnum/",views.getNum),
-    path("payorder",views.payOrder)
+    path("payorder/",views.payOrder),
+    path("userorders/",views.userOrders),
 ]

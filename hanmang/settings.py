@@ -25,8 +25,17 @@ SECRET_KEY = 'd-nb301^z&i-0db4-h##ucf_8a0w^$&+wt3_kc&$rcrg#t+a3_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# 富文本需要网络图片
+MEDIA = "http://0.0.0.0:8000/media/"
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = [
+    '148.70.169.113',
+    'www.codinglib.cn',
+    '0.0.0.0',
+    '192.168.80.39',
+    '192.168.8.113',
+]
 
 
 # Application definition
@@ -89,7 +98,7 @@ DATABASES = {
         'NAME': 'db_hanmang',
         'USER':'root',
         'PASSWORD':'18996122619',
-        'HOST':'148.70.169.113',
+        'HOST':'0.0.0.0',
         'OPTIONS':{'charset':'utf8mb4'},
     }
 }
@@ -104,33 +113,23 @@ DATABASES = {
 #         }
 #     }
 # }
-# 配置外部可访问
-ALLOWED_HOSTS = [
-    '0.0.0.0',
-    '192.168.8.114',
-    '192.168.80.128',
-    '192.168.80.55',
-    '192.168.43.114',
-    '192.168.0.7',
-    '127.0.0.1'
-]
 
 MEDIA_URL = "/media/"
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 APPEND_SLASH=False
 
-# LifeJoke 的小程序APPID和APPKEY
+# hanmang 的小程序APPID和APPKEY
 # appid
 APP_ID = 'wxe6851ea0c162e8cf'
 # appkey
 APP_KEY = 'fd9f85627742e69506f8bc7bd07a2e6b'
-#jwt 配置
-
-# 寒芒的商户key 这是的要重新写
-Mch_key = '323423sfadsfasdf'
+# 寒芒的商户key
+Mch_id = '1568039401'
 # 微信支付访问接口
 order_url = 'https://api.mch.weixin.qq.com/pay/unifiedorder'
+# 本地发起微信支付 签名失败
 
 REST_FRAMEWORK = {
 'DEFAULT_AUTHENTICATION_CLASSES':(
@@ -187,3 +186,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static'),
 ]
+
+

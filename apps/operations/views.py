@@ -1,6 +1,10 @@
-from django.shortcuts import render
-from django.shortcuts import render
-from django.http.response import HttpResponse
+import datetime
+import hashlib
+import random
+import string
+
+import xmltodict
+from django.http.response import HttpResponse, JsonResponse
 from apps.courses.models import Course
 from apps.users.models import UserProfile
 from apps.operations.models import UserFavorite,UserOpinion,UserOrder
@@ -8,12 +12,21 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core import serializers
 
 from utils.Code import deCryption
-from utils.WeChatPay import get_bodyData,get_paysign,xml_to_dict
 from hanmang.settings import order_url
 import requests
 import time
 
 import json
+
+wxinfo = {
+    "APPID":'wxe6851ea0c162e8cf',
+    "SECRET":'fd9f85627742e69506f8bc7bd07a2e6b',
+    "MCHID":'1568039401',
+    "MCHKEY":'HhCfnmreMdmb0KmaCQwlPDN9Im6BKlxp'
+}
+
+openidUrl = "https://api.weixin.qq.com/sns/jscode2session"
+toOrderUrl = "https://api.mch.weixin.qq.com/pay/unifiedorder"
 
 # Create your views here.
 
@@ -37,6 +50,13 @@ def addFav(request):
             favlist = UserFavorite.objects.filter(user_id=user.id)
             # 从收藏中删除 该课程
             favlist.filter(fav_id=key).delete()
+            # 课程收藏数量-1
+            course = Course.objects.get(id=key)
+            course.fav_nums -= 1
+            if course.fav_nums <= 0:
+                course.fav_nums = 0
+            course.save()
+            print(course.fav_nums)
             # 返回isCollection 为false删除成功
             resp['msg'] = "操作成功"
             resp['data'] = {
@@ -52,6 +72,11 @@ def addFav(request):
             userFav.fav_id = key
             userFav.fav_type = 1
             userFav.save()
+            # 课程收藏数量+1
+            course = Course.objects.get(id=key)
+            course.fav_nums += 1
+            course.save()
+            print(course.fav_nums)
             # 返回isCollection为true 添加成功
             resp['msg'] = "操作成功"
             resp['data'] = {
@@ -61,24 +86,6 @@ def addFav(request):
         return HttpResponse(json.dumps(resp))
     else:
         resp = {'code': 200, 'msg': '操作成功', 'data': {}}
-        return HttpResponse(json.dumps(resp))
-
-# 待测试
-## 获取所有订单
-@csrf_exempt
-def getOrder(request):
-    resp = {'code': 200, 'msg': '操作成功', 'data': {}}
-    if request.method == "POST":
-        token = request.POST.get("token")
-        openid = deCryption(token)
-        user = UserProfile.objects.filter(openid = openid)[0]
-        userOrders = UserOrder.objects.filter(user=user)
-        serializers.serialize("json",userOrders)
-        resp['data'] = userOrders
-        return HttpResponse(json.dumps(resp))
-    else:
-        resp['code'] = 500
-        resp['msg'] = "操作失败"
         return HttpResponse(json.dumps(resp))
 
 
@@ -190,52 +197,129 @@ def getNum(request):
 
 
 
-# 统一下单支付接口
+'''
+    统一下单支付接口
+'''
 @csrf_exempt
 def payOrder(request):
     if request.method == 'POST':
         # 获取价格
-        price = request.POST.get("price")
-
+        price = float(request.POST.get("price"))
+        # 获取课程id
+        course_id = request.POST.get("course_id")
+        course = Course.objects.get(id=course_id)
         # 获取客户端ip
-        client_ip, port = request.get_host().split(":")
-
+        # client_ip, port = request.get_host().split(":")
         # 获取小程序openid
+        token = request.POST.get("token")
+        openid = deCryption(token) # 创建订单的用户
+        user = UserProfile.objects.get(openid=openid) #拿到用户 做订单创建存储
+        nonce_str = randomStr()
+        now_time = datetime.datetime.now() # 订单创建时间
+        out_trade_no = str(now_time.year)+str(random.randrange(1000000,99999999)) # 商户订单号
+        body = course.name +":"+ course.desc
+        params = {
+            'appid':wxinfo['APPID'],
+            'mch_id':wxinfo['MCHID'],
+            'openid':openid,
+            'nonce_str':nonce_str,
+            'body':body, # 获取到的商品的内容 商品的名字
+            'out_trade_no': out_trade_no,
+            'total_fee':'10', #　商品课程的价格
+            'spbill_create_ip':'192.168.80.39', # 本地ip地址
+            'notify_url':'https://baidu.com/pay-res', # 还没有写的回调函数地址
+            'trade_type':'JSAPI',
+        }
+        sign = wx_sign(params)
+        params['sign'] = sign
+        print(params)
+        xmlmsg = send_xml_request(toOrderUrl,params)
+        data = {}
+
+        if xmlmsg['xml']['return_code'] == 'SUCCESS':
+            prepay_id = xmlmsg['xml']['prepay_id']
+            timeStamp = str(int(time.time()))
+            data = {
+                'appId': wxinfo['APPID'],
+                'nonceStr': nonce_str,
+                'package': "prepay_id=" + prepay_id,
+                'signType': 'MD5',
+                'timeStamp': timeStamp
+            }
+            paySign = wx_sign(data)
+            data['paySign'] = paySign
+            print(data)
+        ## 创建订单 将支付状态设置为 待付款 存储
+        userOrder = UserOrder(
+            user=user,
+            course=course,
+            order_sn=out_trade_no,
+            pay_price=course.price,
+            pay_time=None, #在回调函数中 若支付成功 设置支付时间
+            created_time=now_time,
+            order_desc=body,
+            order_Opinion=None,
+            is_Opinion=False,
+            is_Pay=False #在回调函数中 若支付成功 把他设置为True
+        ).save()
+        # 为学习人数加一
+        course.students += 1
+
+        return HttpResponse(json.dumps(data))
+    else:
+        resp = {'code': 500, 'msg': '请求类型错误,请求失败', 'data': {}}
+        return HttpResponse(json.dumps(resp))
+
+# 将字典转换为xml 发送到微信服务器
+def send_xml_request(url,param):
+    param = {'xml':param}
+    xml = xmltodict.unparse(param)
+    print(xml)
+    response = requests.post(url,data=xml.encode('UTF8'),headers={
+        'Content-Type':'charset=utf-8'
+    })
+    msg = response.text
+    print(response.content.decode('utf-8'))
+
+    xmlmsg = xmltodict.parse(msg)
+    return xmlmsg
+
+
+
+# 生成随机字符串
+def randomStr():
+    return ''.join(random.sample(string.ascii_letters+string.digits,32))
+
+
+# 算法签名
+def wx_sign(param):
+    stringA = ""
+    ks = sorted(param.keys())
+    for k in ks:
+        stringA += (k + '=' + param[k] + '&')
+
+    stringSignTemp = stringA + "key=" + wxinfo['MCHKEY']
+
+    hash_md5 = hashlib.md5(stringSignTemp.encode('utf8'))
+    sign = hash_md5.hexdigest().upper()
+    return sign
+
+'''
+    统一下单支付接口
+'''
+
+# 获取所有的用户订单
+def userOrders(request):
+    resp = {'code': 200, 'msg': '操作成功', 'data': {}}
+    if request.method == "GET":
         token = request.GET.get("token")
         openid = deCryption(token)
-
-
-        # 请求微信的url
-        url = order_url
-
-        # 拿到封装好的xml数据
-        body_data = get_bodyData(openid, client_ip, price)
-
-        # 获取时间戳
-        timeStamp = str(int(time.time()))
-
-        # 请求微信接口下单
-        respone = requests.post(url, body_data.encode("utf-8"), headers={'Content-Type': 'application/xml'})
-
-        # 回复数据为xml,将其转为字典
-        content = xml_to_dict(respone.content)
-
-        if content["return_code"] == 'SUCCESS':
-            # 获取预支付交易会话标识
-            prepay_id = content.get("prepay_id")
-            # 获取随机字符串
-            nonceStr = content.get("nonce_str")
-
-            # 获取paySign签名，这个需要我们根据拿到的prepay_id和nonceStr进行计算签名
-            paySign = get_paysign(prepay_id, timeStamp, nonceStr)
-
-            # 封装返回给前端的数据
-            data = {"prepay_id": prepay_id, "nonceStr": nonceStr, "paySign": paySign, "timeStamp": timeStamp}
-
-            return HttpResponse(json.dumps(data))
-
-        else:
-            return HttpResponse("请求支付失败")
+        user = UserProfile.objects.filter(openid = openid)[0]
+        orders = UserOrder.objects.values().filter(user=user)
+        orders_list = list(orders)
+        print(type(orders_list))
+        return HttpResponse(orders_list)
     else:
-        resp = {'code':500,'msg':"请求失败"}
+        resp['code'] = 500
+        resp['msg'] = "请求类型错误操作失败"
         return HttpResponse(json.dumps(resp))

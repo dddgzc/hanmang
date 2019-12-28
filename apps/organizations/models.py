@@ -1,5 +1,5 @@
 from django.db import models
-from apps.users.models import BaseModel
+from apps.users.models import BaseModel,UserProfile
 
 # Create your models here.
 class City(BaseModel):
@@ -35,6 +35,7 @@ class CourseOrg(BaseModel):
 
 class Teacher(BaseModel):
     org = models.ForeignKey(CourseOrg,on_delete=models.CASCADE,verbose_name="所属机构")
+    userProfile = models.ForeignKey(UserProfile,default=None,verbose_name="对应用户",on_delete=models.CASCADE,null=True)
     name = models.CharField(max_length=50,verbose_name=u"教师名")
     work_years = models.IntegerField(default=0,verbose_name="工作年限")
     work_company = models.CharField(max_length=50,verbose_name="就职公司")

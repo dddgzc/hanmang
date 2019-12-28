@@ -15,7 +15,6 @@ def getOrganizations(request):
         all_class = CourseOrg.objects.all()
         all_class = serializers.serialize("json", all_class)
         all_class = json.loads(all_class)
-
         resp['data'] = all_class
         return HttpResponse(json.dumps(resp))
     else:

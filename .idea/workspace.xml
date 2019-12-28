@@ -2,14 +2,816 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7ddab04-c474-4ea3-8fc6-13bab2b81ee3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/courses/migrations/0002_loopitems.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/courses/migrations/0003_course_course_org.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/organizations/migrations/0002_teacher_userprofile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0002_remove_userprofile_openid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hanmang-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hanmang-master.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/commands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/UEditorSnapscreen.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/UEditorSnapscreen.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/addCustomizeButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/addCustomizeButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/addCustomizeCombox.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/addCustomizeCombox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/addCustomizeDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/addCustomizeDialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/charts.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/charts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/completeDemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/completeDemo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/customPluginDemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/customPluginDemo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/customToolbarDemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/customToolbarDemo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/customizeDialogPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/customizeDialogPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/customizeToolbarUIDemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/customizeToolbarUIDemo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/editor_api.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/editor_api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/filterRuleDemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/filterRuleDemo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/highlightDemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/highlightDemo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/jqueryCompleteDemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/jqueryCompleteDemo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/jqueryValidation.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/jqueryValidation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/multiDemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/multiDemo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/multiEditorWithOneInstance.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/multiEditorWithOneInstance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/renderInTable.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/renderInTable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/resetDemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/resetDemo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/sectiondemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/sectiondemo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/server/getContent.ashx" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/server/getContent.ashx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/server/getContent.asp" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/server/getContent.asp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/server/getContent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/server/getContent.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/server/getContent.php" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/server/getContent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/setWidthHeightDemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/setWidthHeightDemo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/simpleDemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/simpleDemo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/sortableDemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/sortableDemo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/submitFormDemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/submitFormDemo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/textareaDemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/textareaDemo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/uparsedemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/_examples/uparsedemo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/anchor/anchor.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/anchor/anchor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/attachment.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/attachment.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/attachment.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/attachment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/attachment.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/attachment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_chm.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_chm.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_default.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_default.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_doc.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_doc.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_exe.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_exe.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_jpg.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_jpg.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_mp3.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_mp3.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_mv.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_mv.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_pdf.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_pdf.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_ppt.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_ppt.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_psd.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_psd.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_rar.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_rar.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_txt.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_txt.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_xls.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/fileTypeImages/icon_xls.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/alignicon.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/alignicon.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/alignicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/alignicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/file-icons.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/file-icons.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/file-icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/file-icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/icons.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/icons.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/image.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/progress.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/progress.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/success.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/success.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/success.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/attachment/images/success.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/background/background.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/background/background.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/background/background.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/background/background.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/background/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/background/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/background/images/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/background/images/bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/background/images/success.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/background/images/success.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/chart.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/chart.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/charts.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/charts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/charts.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/charts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/charts.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/charts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/images/charts0.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/images/charts0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/images/charts1.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/images/charts1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/images/charts2.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/images/charts2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/images/charts3.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/images/charts3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/images/charts4.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/images/charts4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/images/charts5.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/charts/images/charts5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/emotion.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/emotion.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/emotion.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/emotion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/emotion.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/emotion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/images/0.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/images/0.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/images/bface.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/images/bface.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/images/cface.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/images/cface.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/images/fface.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/images/fface.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/images/jxface2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/images/jxface2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/images/neweditor-tab-bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/images/neweditor-tab-bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/images/tface.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/images/tface.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/images/wface.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/images/wface.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/images/yface.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/emotion/images/yface.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/gmap/gmap.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/gmap/gmap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/help/help.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/help/help.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/help/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/help/help.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/help/help.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/help/help.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/image.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/image.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/image.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/image.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/images/alignicon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/images/alignicon.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/images/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/images/bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/images/icons.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/images/icons.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/images/icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/images/icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/images/image.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/images/image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/images/progress.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/images/progress.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/images/success.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/images/success.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/images/success.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/image/images/success.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/insertframe/insertframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/insertframe/insertframe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/internal.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/internal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/link/link.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/link/link.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/map/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/map/map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/map/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/map/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/music/music.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/music/music.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/music/music.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/music/music.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/music/music.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/music/music.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/preview/preview.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/preview/preview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/addimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/addimg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/brush.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/brush.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/delimg.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/delimg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/delimgH.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/delimgH.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/empty.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/empty.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/emptyH.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/emptyH.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/eraser.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/eraser.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/redo.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/redo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/redoH.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/redoH.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/scale.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/scale.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/scaleH.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/scaleH.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/size.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/size.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/undo.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/undo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/undoH.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/images/undoH.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/scrawl.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/scrawl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/scrawl.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/scrawl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/scrawl.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/scrawl/scrawl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/searchreplace/searchreplace.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/searchreplace/searchreplace.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/searchreplace/searchreplace.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/searchreplace/searchreplace.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/snapscreen/snapscreen.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/snapscreen/snapscreen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/spechars/spechars.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/spechars/spechars.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/spechars/spechars.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/spechars/spechars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/table/dragicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/table/dragicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/table/edittable.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/table/edittable.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/table/edittable.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/table/edittable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/table/edittable.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/table/edittable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/table/edittd.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/table/edittd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/table/edittip.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/table/edittip.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/images/bg.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/images/bg.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/images/pre0.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/images/pre0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/images/pre1.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/images/pre1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/images/pre2.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/images/pre2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/images/pre3.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/images/pre3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/images/pre4.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/images/pre4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/template.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/template.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/template.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/template/template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/center_focus.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/center_focus.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/file-icons.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/file-icons.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/file-icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/file-icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/icons.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/icons.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/image.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/left_focus.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/left_focus.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/none_focus.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/none_focus.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/progress.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/progress.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/right_focus.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/right_focus.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/success.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/success.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/success.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/images/success.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/video.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/video.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/video.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/video.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/video/video.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/webapp/webapp.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/webapp/webapp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/wordimage/fClipboard_ueditor.swf" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/wordimage/fClipboard_ueditor.swf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/wordimage/imageUploader.swf" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/wordimage/imageUploader.swf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/wordimage/tangram.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/wordimage/tangram.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/wordimage/wordimage.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/wordimage/wordimage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/wordimage/wordimage.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/dialogs/wordimage/wordimage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/addimage.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/addimage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/alldeletebtnhoverskin.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/alldeletebtnhoverskin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/alldeletebtnupskin.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/alldeletebtnupskin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/button.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/button.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/copy.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/copy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/deletedisable.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/deletedisable.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/deleteenable.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/deleteenable.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/listbackground.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/listbackground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/localimage.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/localimage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/music.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/music.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/rotateleftdisable.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/rotateleftdisable.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/rotateleftenable.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/rotateleftenable.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/rotaterightdisable.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/rotaterightdisable.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/rotaterightenable.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/rotaterightenable.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/upload.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/en/images/upload.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/zh-cn/images/copy.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/zh-cn/images/copy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/zh-cn/images/localimage.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/zh-cn/images/localimage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/zh-cn/images/music.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/zh-cn/images/music.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/zh-cn/images/upload.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/zh-cn/images/upload.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/zh-cn/zh-cn.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/lang/zh-cn/zh-cn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/php/Uploader.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/php/Uploader.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/php/action_crawler.php" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/php/action_crawler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/php/action_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/php/action_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/php/action_upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/php/action_upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/php/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/php/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/php/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/php/controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/css/ueditor.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/css/ueditor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/css/ueditor.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/css/ueditor.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/dialogbase.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/dialogbase.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/anchor.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/anchor.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/arrow_down.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/arrow_down.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/arrow_up.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/arrow_up.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/button-bg.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/button-bg.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/cancelbutton.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/cancelbutton.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/charts.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/charts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/cursor_h.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/cursor_h.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/cursor_h.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/cursor_h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/cursor_v.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/cursor_v.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/cursor_v.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/cursor_v.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/dialog-title-bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/dialog-title-bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/fileScan.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/fileScan.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/highlighted.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/highlighted.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/icons-all.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/icons-all.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/icons.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/icons.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/loaderror.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/loaderror.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/loading.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/lock.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/lock.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/neweditor-tab-bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/neweditor-tab-bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/pagebreak.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/pagebreak.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/scale.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/scale.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/sortable.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/sortable.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/spacer.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/spacer.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/sparator_v.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/sparator_v.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/table-cell-align.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/table-cell-align.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/tangram-colorpicker.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/tangram-colorpicker.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/toolbar_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/toolbar_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/unhighlighted.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/unhighlighted.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/upload.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/upload.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/videologo.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/videologo.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/word.gif" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/word.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/wordpaste.png" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/default/images/wordpaste.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/iframe.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/themes/iframe.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/SyntaxHighlighter/shCore.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/SyntaxHighlighter/shCore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/codemirror/codemirror.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/codemirror/codemirror.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/codemirror/codemirror.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/codemirror/codemirror.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/adapters/mootools-adapter.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/adapters/mootools-adapter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/adapters/mootools-adapter.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/adapters/mootools-adapter.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/adapters/prototype-adapter.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/adapters/prototype-adapter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/adapters/prototype-adapter.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/adapters/prototype-adapter.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/adapters/standalone-framework.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/adapters/standalone-framework.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/adapters/standalone-framework.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/adapters/standalone-framework.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/highcharts-more.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/highcharts-more.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/highcharts-more.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/highcharts-more.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/highcharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/highcharts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/highcharts.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/highcharts.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/annotations.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/annotations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/annotations.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/annotations.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/canvas-tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/canvas-tools.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/canvas-tools.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/canvas-tools.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/data.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/data.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/drilldown.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/drilldown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/drilldown.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/drilldown.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/exporting.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/exporting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/exporting.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/exporting.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/funnel.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/funnel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/funnel.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/funnel.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/heatmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/heatmap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/heatmap.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/heatmap.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/map.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/map.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/no-data-to-display.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/no-data-to-display.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/no-data-to-display.src.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/modules/no-data-to-display.src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/themes/dark-blue.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/themes/dark-blue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/themes/dark-green.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/themes/dark-green.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/themes/gray.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/themes/gray.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/themes/grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/themes/grid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/themes/skies.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/highcharts/themes/skies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/jquery-1.10.2.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/jquery-1.10.2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/jquery-1.10.2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/jquery-1.10.2.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/jquery-1.10.2.min.map" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/jquery-1.10.2.min.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/snapscreen/UEditorSnapscreen.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/snapscreen/UEditorSnapscreen.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/video-js/font/vjs.eot" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/video-js/font/vjs.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/video-js/font/vjs.svg" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/video-js/font/vjs.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/video-js/font/vjs.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/video-js/font/vjs.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/video-js/font/vjs.woff" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/video-js/font/vjs.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/video-js/video-js.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/video-js/video-js.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/video-js/video-js.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/video-js/video-js.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/video-js/video-js.swf" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/video-js/video-js.swf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/video-js/video.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/video-js/video.dev.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/video-js/video.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/video-js/video.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/Uploader.swf" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/Uploader.swf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.css" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.custom.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.custom.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.flashonly.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.flashonly.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.flashonly.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.flashonly.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.html5only.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.html5only.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.html5only.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.html5only.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.withoutimage.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.withoutimage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.withoutimage.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/webuploader/webuploader.withoutimage.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/zeroclipboard/ZeroClipboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/zeroclipboard/ZeroClipboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/zeroclipboard/ZeroClipboard.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/zeroclipboard/ZeroClipboard.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/zeroclipboard/ZeroClipboard.swf" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/third-party/zeroclipboard/ZeroClipboard.swf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/ueditor.all.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/ueditor.all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/ueditor.all.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/ueditor.all.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/ueditor.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/ueditor.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/ueditor.parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/ueditor.parse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/ueditor.parse.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/static/ueditor/ueditor.parse.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/templates/ueditor.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/templates/ueditor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/templates/ueditor_old.html" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/templates/ueditor_old.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/test_try.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/test_try.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/ueditor.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/ueditor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/widgets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoUeditor/安装和配置" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoUeditor/安装和配置" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/courses/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/courses/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/courses/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/courses/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/courses/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/courses/adminx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/courses/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/courses/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/courses/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/courses/migrations/0002_course_price.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/courses/migrations/0003_auto_20191126_0923.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/courses/migrations/0004_auto_20191128_1342.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/courses/migrations/0005_auto_20191128_1403.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/courses/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/courses/migrations/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/courses/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/courses/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/courses/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/courses/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/courses/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/courses/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/courses/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/courses/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/operations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/operations/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/operations/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/adminx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/operations/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/operations/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/operations/migrations/0002_auto_20191121_0926.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/operations/migrations/0003_userorder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/operations/migrations/0004_useropinion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/operations/migrations/0005_auto_20191211_1042.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/operations/migrations/0006_auto_20191211_1048.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/operations/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/operations/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/operations/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/operations/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/operations/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/organizations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/organizations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/organizations/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/organizations/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/organizations/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/organizations/adminx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/organizations/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/organizations/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/organizations/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/organizations/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/organizations/migrations/0002_auto_20191121_0926.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/organizations/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/organizations/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/organizations/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/organizations/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/organizations/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/organizations/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/organizations/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/organizations/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/organizations/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/organizations/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/migrations/0002_auto_20191121_0038.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/migrations/0003_auto_20191121_0059.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/migrations/0004_userprofile_openid.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/migrations/0003_userprofile_openid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/migrations/0005_auto_20191126_0142.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/migrations/0006_userprofile_salt.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/migrations/0007_auto_20191126_1441.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra_apps/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/extra_apps/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hanmang/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/hanmang/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hanmang/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/hanmang/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hanmang/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hanmang/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hanmang/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/hanmang/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/course/2019/11/2019-11-19_15-23-21屏幕截图.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/course/2019/11/2019-11-19_15-23-21屏幕截图.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/course/2019/11/pic2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/course/2019/11/pic2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/course/2019/11/pic2_MbSGf1f.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/course/2019/11/pic2_MbSGf1f.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/course/2019/11/pic2_QfX7qUl.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/course/2019/11/pic2_QfX7qUl.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/course/2019/11/pic2_dGWo5E8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/course/2019/11/pic2_dGWo5E8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/course/2019/11/pic2_qnDcxLk.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/course/2019/11/pic2_qnDcxLk.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/course/2019/11/pic2_uUB6bW1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/course/2019/11/pic2_uUB6bW1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/course/2019/12/banner-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/course/2019/12/banner-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/course/resourse/2019/12/dde-introduction.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/media/course/resourse/2019/12/dde-introduction.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/course/uediter/b4534b9fd22f478314f3cbbf286b7338_20191206095921_368.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/course/uediter/b4534b9fd22f478314f3cbbf286b7338_20191206095921_368.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/course/uediter/redis_20191212200943_167.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/course/uediter/redis_20191212200943_167.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/org/2019/11/webwxgetmsgimg.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/org/2019/11/webwxgetmsgimg.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/org/2019/11/webwxgetmsgimg_70nTvNt.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/org/2019/11/webwxgetmsgimg_70nTvNt.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/org/2019/11/xiaomi.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/org/2019/11/xiaomi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/org/2019/11/xueyuan.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/org/2019/11/xueyuan.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/org/2019/12/64.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/org/2019/12/64.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/teacher/2019/11/avtar.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/teacher/2019/11/avtar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/teacher/2019/11/avtar_ZpAIMSN.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/teacher/2019/11/avtar_ZpAIMSN.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/teacher/2019/12/64.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/teacher/2019/12/64.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/Code.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/Code.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/Helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/Helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/WXBizDataCrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/WXBizDataCrypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/WeChatOpenId.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/WeChatOpenId.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/WeChatPay.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/WeChatPay.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/.tx/config" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/.tx/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/adminx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/layout.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/layout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/de_DE/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/de_DE/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/de_DE/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/de_DE/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/de_DE/LC_MESSAGES/djangojs.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/de_DE/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/de_DE/LC_MESSAGES/djangojs.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/de_DE/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/en/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/en/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/en/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/en/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/en/LC_MESSAGES/djangojs.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/en/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/en/LC_MESSAGES/djangojs.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/en/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/es_MX/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/es_MX/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/es_MX/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/es_MX/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/es_MX/LC_MESSAGES/djangojs.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/es_MX/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/es_MX/LC_MESSAGES/djangojs.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/es_MX/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/eu/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/eu/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/eu/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/eu/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/eu/LC_MESSAGES/djangojs.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/eu/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/eu/LC_MESSAGES/djangojs.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/eu/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/id_ID/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/id_ID/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/id_ID/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/id_ID/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/id_ID/LC_MESSAGES/djangojs.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/id_ID/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/id_ID/LC_MESSAGES/djangojs.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/id_ID/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/ja/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/ja/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/ja/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/ja/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/ja/LC_MESSAGES/djangojs.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/ja/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/ja/LC_MESSAGES/djangojs.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/ja/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/lt/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/lt/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/lt/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/lt/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/lt/LC_MESSAGES/djangojs.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/lt/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/lt/LC_MESSAGES/djangojs.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/lt/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/nl_NL/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/nl_NL/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/nl_NL/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/nl_NL/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/nl_NL/LC_MESSAGES/djangojs.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/nl_NL/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/nl_NL/LC_MESSAGES/djangojs.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/nl_NL/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/pl/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/pl/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/pl/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/pl/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/pl/LC_MESSAGES/djangojs.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/pl/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/pl/LC_MESSAGES/djangojs.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/pl/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/pt_BR/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/pt_BR/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/pt_BR/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/pt_BR/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/pt_BR/LC_MESSAGES/djangojs.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/pt_BR/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/pt_BR/LC_MESSAGES/djangojs.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/pt_BR/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/ru_RU/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/ru_RU/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/ru_RU/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/ru_RU/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/ru_RU/LC_MESSAGES/djangojs.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/ru_RU/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/ru_RU/LC_MESSAGES/djangojs.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/ru_RU/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/zh_Hans/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/zh_Hans/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/zh_Hans/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/zh_Hans/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/zh_Hans/LC_MESSAGES/djangojs.mo" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/zh_Hans/LC_MESSAGES/djangojs.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/locale/zh_Hans/LC_MESSAGES/djangojs.po" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/locale/zh_Hans/LC_MESSAGES/djangojs.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/migrations/0002_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/migrations/0002_log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/migrations/0003_auto_20160715_0100.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/migrations/0003_auto_20160715_0100.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/aggregation.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/aggregation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/ajax.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/ajax.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/batch.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/batch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/bookmark.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/bookmark.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/chart.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/chart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/comments.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/comments.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/details.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/details.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/editable.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/editable.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/excel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/export.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/export.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/images.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/images.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/importexport.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/importexport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/inline.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/inline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/language.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/language.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/layout.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/layout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/mobile.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/mobile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/multiselect.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/multiselect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/passwords.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/passwords.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/portal.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/portal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/quickfilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/quickfilter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/quickform.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/quickform.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/refresh.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/refresh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/relate.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/relate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/relfield.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/relfield.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/sitemenu.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/sitemenu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/sortablelist.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/sortablelist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/themes.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/themes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/topnav.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/topnav.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/ueditor.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/ueditor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/wizard.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/wizard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/plugins/xversion.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/plugins/xversion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/sites.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/sites.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/component.json" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/component.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/themes/bootstrap-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/themes/bootstrap-theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/themes/bootstrap-theme.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/themes/bootstrap-theme.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/themes/bootstrap-xadmin.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/themes/bootstrap-xadmin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.form.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.main.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.page.dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.page.dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugin.aggregation.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugin.aggregation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugin.formset.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugin.formset.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugin.importexport.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugin.importexport.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugin.quickfilter.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugin.quickfilter.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugins.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.plugins.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.widget.editable.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.widget.editable.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.widget.select-transfer.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/css/xadmin.widget.select-transfer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.main.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.page.dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.page.dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.page.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.page.form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.page.list.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.page.list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.batch.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.batch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.bookmark.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.bookmark.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.charts.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.charts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.details.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.details.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.editable.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.editable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.filters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.formset.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.formset.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.importexport.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.importexport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.portal.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.portal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.quick-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.quick-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.quickfilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.quickfilter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.refresh.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.refresh.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.revision.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.revision.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.sortablelist.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.sortablelist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.themes.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.plugin.themes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.responsive.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.responsive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.ueditor.all.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.ueditor.all.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.ueditor.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.ueditor.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.widget.datetime.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.widget.datetime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.widget.multiselect.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.widget.multiselect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.widget.select-transfer.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.widget.select-transfer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.widget.select.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/js/xadmin.widget.select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/autotype/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/autotype/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/css/datepicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/css/datepicker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.bg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.cs.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.cs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.da.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.da.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.de.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.de.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.el.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.el.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.es.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.fi.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.fi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.he.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.he.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.hr.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.hr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.hu.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.hu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.id.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.id.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.is.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.is.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.it.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.it.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ja.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ja.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.lt.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.lt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.lv.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.lv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ms.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.nb.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.nb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.nl.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.nl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pl.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt-BR.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt-BR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ro.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.rs-latin.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.rs-latin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.rs.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.rs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.ru.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sk.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sl.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sv.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.sw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.th.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.th.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.tr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.uk.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.uk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-CN.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-CN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-TW.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-TW.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/img/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/img/loading.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-modal/css/bootstrap-modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-modal/css/bootstrap-modal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-modal/img/ajax-loader.gif" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-modal/img/ajax-loader.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-modal/js/bootstrap-modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-modal/js/bootstrap-modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-modal/js/bootstrap-modalmanager.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-modal/js/bootstrap-modalmanager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-multiselect/css/bootstrap-multiselect.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-multiselect/css/bootstrap-multiselect.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-multiselect/js/bootstrap-multiselect.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-multiselect/js/bootstrap-multiselect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-timepicker/css/bootstrap-timepicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-timepicker/css/bootstrap-timepicker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-timepicker/css/bootstrap-timepicker.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-timepicker/css/bootstrap-timepicker.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-timepicker/js/bootstrap-timepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-timepicker/js/bootstrap-timepicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-timepicker/js/bootstrap-timepicker.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap-timepicker/js/bootstrap-timepicker.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/excanvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/excanvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/excanvas.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/excanvas.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.colorhelpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.colorhelpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.aggregate.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.aggregate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.canvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.crosshair.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.crosshair.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.errorbars.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.errorbars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.fillbetween.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.fillbetween.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.image.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.navigate.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.navigate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.pie.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.pie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.resize.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.resize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.selection.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.selection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.stack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.symbol.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.symbol.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.threshold.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.threshold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.time.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/flot/jquery.flot.time.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/css/font-awesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/css/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.core.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.core.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.core.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.effect.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.effect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.effect.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.effect.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.mouse.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.mouse.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.sortable.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.sortable.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.widget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.widget.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery-ui/jquery.ui.widget.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/jquery/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/load-image/load-image.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/load-image/load-image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/load-image/load-image.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/load-image/load-image.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2-spinner.gif" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2-spinner.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2.png" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_de.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_de.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_en.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_es.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_eu.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_eu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_hr.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_hr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_hu.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_hu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_it.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_it.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_nl.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_nl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_pt-BR.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_pt-BR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_pt-PT.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_pt-PT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_ro.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_ro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_ru.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_sk.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_sk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_sv.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_sv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_tr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_ua.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_ua.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_zh-CN.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_zh-CN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_zh-hans.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2_locale_zh-hans.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2x2.png" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/select2/select2x2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.bootstrap2.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.bootstrap2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.bootstrap3.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.bootstrap3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.default.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.legacy.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.legacy.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/selectize/selectize.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/snapjs/snap.css" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/snapjs/snap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/snapjs/snap.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/snapjs/snap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/snapjs/snap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/static/xadmin/vendor/snapjs/snap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/complete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/done.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/email.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/password_reset/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/user/add_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/user/add_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/user/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/auth/user/change_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/base_site.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/base_site.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/comm.top.setlang.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/comm.top.setlang.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/comm.top.theme.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/comm.top.theme.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/comm.top.topnav.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/comm.top.topnav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/modal_list.left_navbar.quickfilter.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/modal_list.left_navbar.quickfilter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_form.before_fieldsets.wizard.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_form.before_fieldsets.wizard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_form.submit_line.wizard.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_form.submit_line.wizard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.nav_form.search_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.nav_form.search_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.nav_menu.bookmarks.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.nav_menu.bookmarks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.nav_menu.filters.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.nav_menu.filters.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.results_bottom.actions.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.results_bottom.actions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.results_top.charts.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.results_top.charts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.results_top.date_hierarchy.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.results_top.date_hierarchy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.exports.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.exports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.importexport.export.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.importexport.export.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.importexport.import.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.importexport.import.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.layouts.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.layouts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.refresh.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.refresh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.saveorder.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/blocks/model_list.top_toolbar.saveorder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/accordion.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/accordion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/blank.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/blank.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/one.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/one.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/stacked.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/stacked.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/tab.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/tab.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/tabular.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/edit_inline/tabular.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/excel/model_list.top_toolbar.import.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/excel/model_list.top_toolbar.import.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/char.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/char.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/checklist.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/checklist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/date.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/date.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/fk_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/fk_search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/number.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/number.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/quickfilter.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/quickfilter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/rel.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/filters/rel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/forms/transfer.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/forms/transfer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/grids/thumbnails.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/grids/thumbnails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/import_export/export_action.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/import_export/export_action.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/import_export/import.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/import_export/import.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/box.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/box.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/pagination.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/pagination.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/sitemenu_accordion.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/sitemenu_accordion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/sitemenu_default.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/sitemenu_default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/submit_line.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/submit_line.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/toggle_back.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/toggle_back.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/toggle_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/includes/toggle_menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/field_value.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/field_value.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/field_value_td.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/field_value_td.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/fieldset.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/fieldset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/input_group.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/input_group.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/td-field.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/layout/td-field.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/app_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/app_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/batch_change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/batch_change_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/invalid_setup.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/invalid_setup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/logged_out.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/logged_out.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_delete_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_delete_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_delete_selected_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_delete_selected_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_history.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/model_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/quick_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/quick_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/quick_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/quick_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/recover_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/recover_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/recover_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/recover_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/revision_diff.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/revision_diff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/views/revision_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/views/revision_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/addform.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/addform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/chart.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/chart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/qbutton.html" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templates/xadmin/widgets/qbutton.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templatetags/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templatetags/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/templatetags/xadmin_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/templatetags/xadmin_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/vendors.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/vendors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/views/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/views/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/views/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/views/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/views/dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/views/dashboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/views/delete.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/views/delete.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/views/detail.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/views/detail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/views/edit.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/views/edit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/views/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/views/form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/views/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/views/list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/views/website.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/views/website.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/widgets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xadmin/xadmin的配置.txt" beforeDir="false" afterPath="$PROJECT_DIR$/xadmin/xadmin的配置.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +838,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/utils" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -59,7 +866,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="hanmang.settings" />
       </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/.virtual/hanmang/bin/python3.6" />
+      <option name="SDK_HOME" value="$USER_HOME$/.vritualenvs/hanmang/bin/python3.7" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -96,7 +903,20 @@
       <workItem from="1576027173881" duration="39807000" />
       <workItem from="1576131654989" duration="21130000" />
       <workItem from="1576313195362" duration="340000" />
-      <workItem from="1576313586895" duration="1681000" />
+      <workItem from="1576313586895" duration="7548000" />
+      <workItem from="1576548484115" duration="13977000" />
+      <workItem from="1576740782492" duration="93000" />
+      <workItem from="1576740885793" duration="2348000" />
+      <workItem from="1576743245187" duration="1583000" />
+      <workItem from="1576807481911" duration="34470000" />
+      <workItem from="1577064408542" duration="12179000" />
+      <workItem from="1577098320707" duration="472000" />
+      <workItem from="1577099109211" duration="757000" />
+      <workItem from="1577149896293" duration="9415000" />
+      <workItem from="1577262682568" duration="2043000" />
+      <workItem from="1577280541414" duration="15000" />
+      <workItem from="1577322384138" duration="643000" />
+      <workItem from="1577496499146" duration="7978000" />
     </task>
     <task id="LOCAL-00001" summary="提交未实现支付">
       <created>1576051957729</created>
@@ -129,6 +949,25 @@
     <option name="LAST_COMMIT_MESSAGE" value="提交未实现支付" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/operations/views.py</url>
+          <line>204</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/WeChatPay.py</url>
+          <line>74</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/operations/views.py</url>
+          <line>314</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Python.DjangoServer">
         <watch expression="request._messages.request._read_started" />

@@ -3,7 +3,8 @@ from datetime import datetime
 from django.db import models
 
 from apps.users.models import BaseModel
-from apps.organizations.models import Teacher
+from hanmang.settings import MEDIA
+from apps.organizations.models import Teacher,CourseOrg
 from DjangoUeditor.models import UEditorField
 # Create your models here.
 """
@@ -30,9 +31,9 @@ class CourseType(BaseModel):
 
 class Course(BaseModel):
     teacher = models.ForeignKey(Teacher,on_delete=models.CASCADE,verbose_name="讲师")
+    course_org = models.ForeignKey(CourseOrg,on_delete=models.CASCADE,verbose_name="机构名称",default=None) # 添加一个课程机构的字段
     name = models.CharField(verbose_name="课程名",max_length=50)
     desc = models.CharField(verbose_name="课程描述",max_length=300)
-    ## 课程价格
     price = models.DecimalField(max_digits=6,decimal_places=2,default=0.0,verbose_name="课程价格")
     learn_times = models.IntegerField(default=0,verbose_name="学习时长(分钟数)")
     degree = models.CharField(verbose_name="难度",choices=(("cj","初级"),("zj","中级"),("gj","高级")),max_length=2)
@@ -92,6 +93,18 @@ class CourseResource(BaseModel):
 
     class Meta:
         verbose_name = "课程资源"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name
+
+class LoopItems(BaseModel):
+    course = models.ForeignKey(Course,on_delete=models.CASCADE,verbose_name="课程")
+    image = models.ImageField(upload_to="cars/%Y/%m",verbose_name="选择图片",max_length=200)
+    name = models.CharField(max_length=50,verbose_name=u"名称")
+
+    class Meta:
+        verbose_name = "轮播图展示课程"
         verbose_name_plural = verbose_name
 
     def __str__(self):

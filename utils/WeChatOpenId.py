@@ -9,10 +9,11 @@ class WeChatOpenId():
             .format(settings.APP_ID, settings.APP_KEY, code)
         r = requests.get(url)
         res = json.loads(r.text)
+        print(res) # 这里拿到了session_key
         openid = None
-        if 'openid' in res:
-            openid = res['openid']
-        return openid
+        if 'openid' in res and 'session_key' in res:
+            return res
+        return None
 
     @staticmethod
     def geneAuthCode( member_info = None ):

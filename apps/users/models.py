@@ -23,6 +23,7 @@ class UserProfile(AbstractUser):
     image = models.CharField(verbose_name="用户头像",max_length=600)
     openid = models.CharField(max_length=64,db_index=True,verbose_name='openid',default=None)
     salt = models.CharField(max_length=32,null = False,default="",verbose_name="盐")
+    is_teacher = models.BooleanField(default=False,verbose_name="是否是老师")
 
     class Meta:
         verbose_name = "用户信息"

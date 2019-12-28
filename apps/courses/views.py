@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http.response import HttpResponse
-from apps.courses.models import Course,CourseType,Lesson,Video
+from apps.courses.models import Course,CourseType,Lesson,Video,LoopItems
 from apps.organizations.models import Teacher,CourseOrg
 from apps.operations.models import CourseComments
 from django.views.decorators.csrf import csrf_exempt
@@ -8,27 +8,34 @@ from django.core import serializers
 
 import json
 
-# Create your views here.
-# 课程机构下的所有老师的所有课程
-# 1. orgid 机构id
-# 2. 通过机构id 获取机构下所有老师
-# 3. 获取所有老师的所有课程
+# 对课程增加了分类字段
 @csrf_exempt
-def courseList(request):
+def getCourseList(request):
+    resp = {'code': -1, 'msg': '请求失败', 'data': {}}
     if request.method == 'GET':
-        resp = {'code': -1, 'msg': '请求失败', 'data': {}}
-        orgid = request.GET.get('orgid')
-        teachers = Teacher.objects.filter(org=orgid)
-        courseList = []
+        orgid = request.GET.get("orgid") # 课程机构
+        current_page = int(request.GET.get("current_page")) #　当前第几页
+        page_size = int(request.GET.get("page_size")) # 一页显示数量
 
-        for teacher in teachers:
-            courses = Course.objects.filter( teacher=teacher.id )
-            for course in courses:
-                courseList.append(course)
-
+        courseList = Course.objects.filter(course_org=orgid)[(current_page-1)*page_size:page_size]
         courseList = serializers.serialize("json",courseList)
-        print(type(courseList))
         return HttpResponse(courseList)
+
+
+
+## 获取首页轮播图
+def itemsLoop(request):
+    resp = {'code': -1, 'msg': '请求失败', 'data': {}}
+    if request.method == 'GET':
+        items = LoopItems.objects.all()
+        items = serializers.serialize("json",items)
+        items = json.loads(items)
+        resp['data'] = items
+        resp['code'] = 200
+        resp['msg'] = "请求成功"
+        return HttpResponse(json.dumps(resp))
+    else:
+        return HttpResponse(json.dumps(resp))
 
 
 ## 获取所有课程分类
@@ -129,4 +136,47 @@ def getCourseComment(request):
         return HttpResponse(json.dumps(res))
     else:
         res = {'code': -1, 'msg': '请求失败', 'data': {}}
+        return HttpResponse(json.dumps(res))
+
+## 分页内容的统一接口
+@csrf_exempt
+def getPageCourses(request):
+    res = {'code': -1, 'msg': '请求失败', 'data': {}}
+    if request.method == "GET":
+        # 当前机构
+        current_origanizations_id = request.GET.get("current_origanizations_id")
+        # 当前页
+        current_page = int(request.GET.get("current_page"))
+        # 当前分类
+        current_category_id = int(request.GET.get("current_category_id"))
+        # 每页显示数量
+        page_size = int(request.GET.get("page_size"));
+
+        if current_category_id == -1:
+            count = Course.objects.filter(course_org=current_origanizations_id).count()
+            # 计算总的页码数量
+            total_page = count / page_size if count % page_size == 0 else int(count / page_size) + 1
+            if current_page > total_page:
+                res['code'] = 500
+                res['msg'] = "暂无数据加载"
+                return HttpResponse(json.dumps(res))
+            courseList = Course.objects.filter(course_org=current_origanizations_id)[(current_page - 1)*page_size:current_page*page_size]
+            courseList = serializers.serialize("json", courseList)
+            return HttpResponse(courseList)
+        else:
+            q = {}
+            q['current_origanizations_id'] = current_origanizations_id
+            q['current_category_id'] = current_category_id
+            count = Course.objects.filter(**q)
+
+            total_page = count / page_size if count % page_size == 0 else count / page_size + 1
+
+            if current_page > total_page:
+                res['code'] = 500
+                res['msg'] = "暂无数据加载"
+                return HttpResponse(json.dumps(res))
+            courseList = Course.objects.filter(**q)[(current_page - 1)*page_size:page_size]
+            courseList = serializers.serialize("json",courseList)
+            return HttpResponse(courseList)
+    else:
         return HttpResponse(json.dumps(res))
